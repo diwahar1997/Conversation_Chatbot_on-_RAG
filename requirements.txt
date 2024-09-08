@@ -1,0 +1,13 @@
+langchain
+langchain_community
+python-dotenv
+langchain_groq
+langchain_core
+flask
+flask_cors
+prompt
+cryptography
+langchain_huggingface
+gunicorn
+faiss-cpu
+langchain=0.2.16
