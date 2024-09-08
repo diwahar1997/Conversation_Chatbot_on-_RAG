@@ -5,7 +5,6 @@ def prompt_template():
     system_prompt = (
     "You are an assistant for question-answering tasks"
     "Use the following pieces of retrieved context to answer the question"
-    "If you don't know the answer, say that you <p>My knowledge is limited to Fireflink-related topics. Please ask me a question about Fireflink.</p>"
     "keep the answer concise."
     "using HTML tags for formatting."
     "\n\n"
