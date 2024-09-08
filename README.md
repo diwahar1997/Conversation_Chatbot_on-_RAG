@@ -32,6 +32,6 @@ This repository contains a **Conversational Chatbot** built using **Retrieval-Au
 
 1. **Clone the Repository**
    ```bash
-  git clone https://github.com/your-username/conversation-chatbot-rag.git
-  cd conversation-chatbot-rag
-  python chatbot.py
+     git clone https://github.com/your-username/conversation-chatbot-rag.git
+     cd conversation-chatbot-rag
+     python chatbot.py
