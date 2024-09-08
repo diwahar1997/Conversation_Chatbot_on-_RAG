@@ -22,12 +22,7 @@ from prompt import prompt_template, contextualize_system_prompt
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 logger = logging.getLogger(__name__)
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "*"}})
-
-
 class Chatbot:
     def __init__(self, vectors_database_location, model_name):
         load_dotenv()
