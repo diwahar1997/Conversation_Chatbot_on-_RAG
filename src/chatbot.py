@@ -36,14 +36,9 @@ class Chatbot:
         self.embeddings = HuggingFaceEmbeddings(model_name=model)
         self.llm = ChatGroq(groq_api_key=groq_api_key, model_name=model_name,max_retries=2,streaming=True,max_tokens=2000,n=1)
         self.prompt = prompt_template()
-        self.vault_URL = os.getenv('vault_URL')
-        self.mongodb_URL = os.getenv('mongodb_URL')
-        self.vault_path = os.getenv('vault_path')
-        self.role_id=os.getenv('role_id')
-        self.secret_id=os.getenv('secret_id')
-        self.Chatbot_session_details=os.getenv('Chatbot_session_details')
-        self.Chatbot_user_data_db_name=os.getenv('Chatbot_user_data_db_name')
-        self.Chatbot_session_deleted_details=os.getenv('Chatbot_session_deleted_details')
+        self.Chatbot_session_details='Chatbot_session_details'
+        self.Chatbot_user_data_db_name='Chatbot_user_data_db_name'
+        self.Chatbot_session_deleted_details='Chatbot_session_deleted_details'
         self.executor = ThreadPoolExecutor(max_workers=10)
         self.session_info = dict()
         self.session_id_list=list() 
@@ -124,7 +119,7 @@ class Chatbot:
         return Response(generate_response(),headers={"session_id":session_id})
 
 
-path = "trail_db"#-------------------------------------------------------------------change the vector DB ----------------------------------------------------------
+path = "trail_db"
 name = "llama3-8b-8192"
 model = 'all-MiniLM-L6-v2'
 chat_bot = Chatbot(path, name)
